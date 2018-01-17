@@ -21209,8 +21209,19 @@
 
 	'use strict';
 	
-	var React = __webpack_require__(1),
-	    Frame = __webpack_require__(35);
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _src = __webpack_require__(35);
+	
+	var _src2 = _interopRequireDefault(_src);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var styles = {
 	  border: '1px solid',
@@ -21220,7 +21231,7 @@
 	
 	var Header = function Header(_ref) {
 	  var children = _ref.children;
-	  return React.createElement(
+	  return _react2.default.createElement(
 	    'h1',
 	    null,
 	    undefined.props.children
@@ -21229,7 +21240,7 @@
 	
 	var Content = function Content(_ref2) {
 	  var children = _ref2.children;
-	  return React.createElement(
+	  return _react2.default.createElement(
 	    'section',
 	    null,
 	    undefined.props.children
@@ -21237,18 +21248,18 @@
 	};
 	
 	var App = function App() {
-	  return React.createElement(
+	  return _react2.default.createElement(
 	    'div',
 	    null,
-	    React.createElement(
+	    _react2.default.createElement(
 	      Header,
 	      null,
 	      'Frame example of wrapping application'
 	    ),
-	    React.createElement(
+	    _react2.default.createElement(
 	      Content,
 	      null,
-	      React.createElement(
+	      _react2.default.createElement(
 	        'h2',
 	        null,
 	        'This whole app is wrapped inside an iFrame'
@@ -21257,26 +21268,26 @@
 	  );
 	};
 	
-	React.render(React.createElement(
-	  Frame,
+	_reactDom2.default.render(_react2.default.createElement(
+	  _src2.default,
 	  { style: styles },
-	  React.createElement(App, null)
+	  _react2.default.createElement(App, null)
 	), document.querySelector('#example1'));
 	
 	var Foobar = function Foobar() {
-	  return React.createElement(
-	    Frame,
-	    { style: styles, head: React.createElement(
+	  return _react2.default.createElement(
+	    _src2.default,
+	    { style: styles, head: _react2.default.createElement(
 	        'style',
 	        null,
 	        '*{color:red}'
 	      ) },
-	    React.createElement(
+	    _react2.default.createElement(
 	      'h1',
 	      null,
 	      'Frame example of wrapping component'
 	    ),
-	    React.createElement(
+	    _react2.default.createElement(
 	      'p',
 	      null,
 	      'This is also showing encapuslated styles. All text is red inside this component.'
@@ -21284,7 +21295,7 @@
 	  );
 	};
 	
-	React.render(React.createElement(Foobar, null), document.querySelector('#example2'));
+	_reactDom2.default.render(_react2.default.createElement(Foobar, null), document.querySelector('#example2'));
 
 /***/ },
 /* 35 */
