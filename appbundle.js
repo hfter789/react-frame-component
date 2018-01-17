@@ -21234,7 +21234,7 @@
 	  return _react2.default.createElement(
 	    'h1',
 	    null,
-	    undefined.props.children
+	    children
 	  );
 	};
 	
@@ -21243,7 +21243,7 @@
 	  return _react2.default.createElement(
 	    'section',
 	    null,
-	    undefined.props.children
+	    children
 	  );
 	};
 	
