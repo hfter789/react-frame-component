@@ -21218,54 +21218,44 @@
 	  height: '100%'
 	};
 	
-	var Header = React.createClass({
-	  displayName: 'Header',
+	var Header = function Header(_ref) {
+	  var children = _ref.children;
+	  return React.createElement(
+	    'h1',
+	    null,
+	    undefined.props.children
+	  );
+	};
 	
-	  render: function render() {
-	    return React.createElement(
-	      'h1',
+	var Content = function Content(_ref2) {
+	  var children = _ref2.children;
+	  return React.createElement(
+	    'section',
+	    null,
+	    undefined.props.children
+	  );
+	};
+	
+	var App = function App() {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      Header,
 	      null,
-	      this.props.children
-	    );
-	  }
-	});
-	
-	var Content = React.createClass({
-	  displayName: 'Content',
-	
-	  render: function render() {
-	    return React.createElement(
-	      'section',
-	      null,
-	      this.props.children
-	    );
-	  }
-	});
-	
-	var App = React.createClass({
-	  displayName: 'App',
-	
-	  render: function render() {
-	    return React.createElement(
-	      'div',
+	      'Frame example of wrapping application'
+	    ),
+	    React.createElement(
+	      Content,
 	      null,
 	      React.createElement(
-	        Header,
+	        'h2',
 	        null,
-	        'Frame example of wrapping application'
-	      ),
-	      React.createElement(
-	        Content,
-	        null,
-	        React.createElement(
-	          'h2',
-	          null,
-	          'This whole app is wrapped inside an iFrame'
-	        )
+	        'This whole app is wrapped inside an iFrame'
 	      )
-	    );
-	  }
-	});
+	    )
+	  );
+	};
 	
 	React.render(React.createElement(
 	  Frame,
@@ -21273,30 +21263,26 @@
 	  React.createElement(App, null)
 	), document.querySelector('#example1'));
 	
-	var Foobar = React.createClass({
-	  displayName: 'Foobar',
-	
-	  render: function render() {
-	    return React.createElement(
-	      Frame,
-	      { style: styles, head: React.createElement(
-	          'style',
-	          null,
-	          '*{color:red}'
-	        ) },
-	      React.createElement(
-	        'h1',
+	var Foobar = function Foobar() {
+	  return React.createElement(
+	    Frame,
+	    { style: styles, head: React.createElement(
+	        'style',
 	        null,
-	        'Frame example of wrapping component'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        'This is also showing encapuslated styles. All text is red inside this component.'
-	      )
-	    );
-	  }
-	});
+	        '*{color:red}'
+	      ) },
+	    React.createElement(
+	      'h1',
+	      null,
+	      'Frame example of wrapping component'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'This is also showing encapuslated styles. All text is red inside this component.'
+	    )
+	  );
+	};
 	
 	React.render(React.createElement(Foobar, null), document.querySelector('#example2'));
 
