@@ -54,15 +54,85 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Application = __webpack_require__(34);
+	var _src = __webpack_require__(34);
 	
-	var _Application2 = _interopRequireDefault(_Application);
+	var _src2 = _interopRequireDefault(_src);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var root = document.createElement('div');
-	document.body.appendChild(root);
-	_reactDom2.default.render(_react2.default.createElement(_Application2.default, null), root);
+	var styles = {
+	  border: '1px solid',
+	  width: '100%',
+	  height: '100%'
+	};
+	
+	var Header = function Header(_ref) {
+	  var children = _ref.children;
+	  return _react2.default.createElement(
+	    'h1',
+	    null,
+	    children
+	  );
+	};
+	
+	var Content = function Content(_ref2) {
+	  var children = _ref2.children;
+	  return _react2.default.createElement(
+	    'section',
+	    null,
+	    children
+	  );
+	};
+	
+	var App = function App() {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      Header,
+	      null,
+	      'Frame example of wrapping application'
+	    ),
+	    _react2.default.createElement(
+	      Content,
+	      null,
+	      _react2.default.createElement(
+	        'h2',
+	        null,
+	        'This whole app is wrapped inside an iFrame'
+	      )
+	    )
+	  );
+	};
+	
+	_reactDom2.default.render(_react2.default.createElement(
+	  _src2.default,
+	  { style: styles },
+	  _react2.default.createElement(App, null)
+	), document.querySelector('#example1'));
+	
+	var Foobar = function Foobar() {
+	  return _react2.default.createElement(
+	    _src2.default,
+	    { style: styles, head: _react2.default.createElement(
+	        'style',
+	        null,
+	        '*{color:red}'
+	      ) },
+	    _react2.default.createElement(
+	      'h1',
+	      null,
+	      'Frame example of wrapping component'
+	    ),
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      'This is also showing encapuslated styles. All text is red inside this component.'
+	    )
+	  );
+	};
+	
+	_reactDom2.default.render(_react2.default.createElement(Foobar, null), document.querySelector('#example2'));
 
 /***/ },
 /* 1 */
@@ -21209,105 +21279,11 @@
 
 	'use strict';
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(12);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	var _src = __webpack_require__(35);
-	
-	var _src2 = _interopRequireDefault(_src);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var styles = {
-	  border: '1px solid',
-	  width: '100%',
-	  height: '100%'
-	};
-	
-	var Header = function Header(_ref) {
-	  var children = _ref.children;
-	  return _react2.default.createElement(
-	    'h1',
-	    null,
-	    children
-	  );
-	};
-	
-	var Content = function Content(_ref2) {
-	  var children = _ref2.children;
-	  return _react2.default.createElement(
-	    'section',
-	    null,
-	    children
-	  );
-	};
-	
-	var App = function App() {
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      Header,
-	      null,
-	      'Frame example of wrapping application'
-	    ),
-	    _react2.default.createElement(
-	      Content,
-	      null,
-	      _react2.default.createElement(
-	        'h2',
-	        null,
-	        'This whole app is wrapped inside an iFrame'
-	      )
-	    )
-	  );
-	};
-	
-	_reactDom2.default.render(_react2.default.createElement(
-	  _src2.default,
-	  { style: styles },
-	  _react2.default.createElement(App, null)
-	), document.querySelector('#example1'));
-	
-	var Foobar = function Foobar() {
-	  return _react2.default.createElement(
-	    _src2.default,
-	    { style: styles, head: _react2.default.createElement(
-	        'style',
-	        null,
-	        '*{color:red}'
-	      ) },
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Frame example of wrapping component'
-	    ),
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'This is also showing encapuslated styles. All text is red inside this component.'
-	    )
-	  );
-	};
-	
-	_reactDom2.default.render(_react2.default.createElement(Foobar, null), document.querySelector('#example2'));
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	
-	var _Frame = __webpack_require__(36);
+	var _Frame = __webpack_require__(35);
 	
 	var _Frame2 = _interopRequireDefault(_Frame);
 
@@ -21316,7 +21292,7 @@
 	exports.default = _Frame2.default;
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21337,11 +21313,11 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _propTypes = __webpack_require__(37);
+	var _propTypes = __webpack_require__(36);
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _DocumentContext = __webpack_require__(45);
+	var _DocumentContext = __webpack_require__(44);
 	
 	var _DocumentContext2 = _interopRequireDefault(_DocumentContext);
 	
@@ -21513,7 +21489,7 @@
 	exports.default = Frame;
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21540,17 +21516,17 @@
 	  // By explicitly using `prop-types` you are opting into new development behavior.
 	  // http://fb.me/prop-types-in-prod
 	  var throwOnDirectAccess = true;
-	  module.exports = __webpack_require__(38)(isValidElement, throwOnDirectAccess);
+	  module.exports = __webpack_require__(37)(isValidElement, throwOnDirectAccess);
 	} else {
 	  // By explicitly using `prop-types` you are opting into new production behavior.
 	  // http://fb.me/prop-types-in-prod
-	  module.exports = __webpack_require__(44)();
+	  module.exports = __webpack_require__(43)();
 	}
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21564,12 +21540,12 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(39);
-	var invariant = __webpack_require__(40);
-	var warning = __webpack_require__(41);
+	var emptyFunction = __webpack_require__(38);
+	var invariant = __webpack_require__(39);
+	var warning = __webpack_require__(40);
 	
-	var ReactPropTypesSecret = __webpack_require__(42);
-	var checkPropTypes = __webpack_require__(43);
+	var ReactPropTypesSecret = __webpack_require__(41);
+	var checkPropTypes = __webpack_require__(42);
 	
 	module.exports = function(isValidElement, throwOnDirectAccess) {
 	  /* global Symbol */
@@ -22069,7 +22045,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22112,7 +22088,7 @@
 	module.exports = emptyFunction;
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22173,7 +22149,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22188,7 +22164,7 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(39);
+	var emptyFunction = __webpack_require__(38);
 	
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -22245,7 +22221,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports) {
 
 	/**
@@ -22265,7 +22241,7 @@
 
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22280,9 +22256,9 @@
 	'use strict';
 	
 	if (process.env.NODE_ENV !== 'production') {
-	  var invariant = __webpack_require__(40);
-	  var warning = __webpack_require__(41);
-	  var ReactPropTypesSecret = __webpack_require__(42);
+	  var invariant = __webpack_require__(39);
+	  var warning = __webpack_require__(40);
+	  var ReactPropTypesSecret = __webpack_require__(41);
 	  var loggedTypeFailures = {};
 	}
 	
@@ -22333,7 +22309,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22347,8 +22323,8 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(39);
-	var invariant = __webpack_require__(40);
+	var emptyFunction = __webpack_require__(38);
+	var invariant = __webpack_require__(39);
 	
 	module.exports = function() {
 	  // Important!
@@ -22393,7 +22369,7 @@
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22408,7 +22384,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _propTypes = __webpack_require__(37);
+	var _propTypes = __webpack_require__(36);
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
